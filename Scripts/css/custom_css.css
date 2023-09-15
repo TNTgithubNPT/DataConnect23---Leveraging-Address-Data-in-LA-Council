@@ -3,6 +3,7 @@
   background-image: url(https://mminpt.co.uk/wp-content/uploads/2018/10/nptcbc.jpg); /*nptcbc image */
   background-size: cover; /*rescales and repositions nptcbc image to center*/
   background-size: 300px; /*sets size of nptcbc image*/
+  background-color: white;
   /*background-position: 1% 50%;*/
   margin: 0
 }
@@ -48,5 +49,12 @@ color: #50ab44 /*hex key for darkest greenest colour in NPT logo */
 color: #0595c7 /*hex key for darkest bluest colour in NPT logo */
 }
 
-
+.left-column{
+  float: left;
+  width: 40%;
+}
+.right-column {
+  float: right;
+  width: 55%;
+}
 }
