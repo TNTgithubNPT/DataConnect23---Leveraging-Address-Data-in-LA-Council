@@ -1,7 +1,7 @@
 ---
 title: "Leveraging Address Data in a Local Authority Council"
-subtitle: "Mr. Tanaka Takawira - Senior Data Analyst" 
-author: "<br><br><br><br><br><br><br><br>Dr. Yasmin Friedmann - Head of Data,<br>Mrs. Rhiannon Elias - Data Analyst"
+subtitle: "Tanaka Takawira - Senior Data Analyst" 
+author: "<br><br><br><br><br><br><br><br>Dr. Yasmin Friedmann - Head of Data<br> Rhiannon Elias - Data Analyst"
 institute: "Neath Port Talbot County Borough Council"
 date: "28/09/2023"
 output:
@@ -49,25 +49,108 @@ xaringanExtra::use_logo(
 )
 ```
 
-???
 
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
 
 ---
+
 class: center, middle
 
-# xaringan
-
-### /ʃaː.'riŋ.ɡan/
-
----
-class: inverse, center, middle
-
-# Get Started
+# Setting and embedding Data Standards
 
 ---
 
-# Hello World
+# Situation
+
+--
+
+## Large volume of Data
+
+--
+
+## Disjointed
+
+--
+
+## Accessiblity
+
+--
+
+## Quality
+
+---
+
+# Motivation
+
+--
+
+## Setting Data Standards would improve
+
+--
+
+### Accessibility of Data
+
+--
+
+### Data Linkage
+
+--
+
+* Internal
+
+--
+
+- External
+
+---
+class: middle, center
+
+# Embedding Address Data Standards
+
+--
+
+## GeoPlace/OS AddressBase
+
+--
+
+- Local Land and Property Gazetteer
+
+--
+
+- OS Data Hub
+
+--
+
+## NUAR - MUDDY standards
+
+--
+
+## PAF - Royal Mail, INSPIRE
+
+--
+
+## Metadata Repository
+
+---
+
+# Attaching UPRN to addresses using Machine-Learning
+
+--
+
+## Unique Property Reference Number (UPRN)
+
+--
+
+## Address-Matching Algorithms
+
+---
+
+# Address-Matching Algorithms
+
+![](images/adrs_matching_diagram.png)
+
+---
+
+## Literature Review
 
 Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
 
@@ -104,7 +187,7 @@ class: center, bottom, inverse
 
 ---
 
-# Hello Ninja
+# Hello World
 
 Leveraging Address Data in a Local Authority Council
 
