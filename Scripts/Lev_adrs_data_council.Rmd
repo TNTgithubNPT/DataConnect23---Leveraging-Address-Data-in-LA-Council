@@ -1,7 +1,7 @@
 ---
 title: "Leveraging Address Data in a Local Authority Council"
 subtitle: "Tanaka Takawira - Senior Data Analyst" 
-author: "<br><br><br><br><br><br><br><br>Dr. Yasmin Friedmann - Head of Data<br> Rhiannon Elias - Data Analyst"
+author: "<br><br><br><br><br><br><br><br><br><br><br>Dr. Yasmin Friedmann - Head of Data<br> Rhiannon Elias - Data Analyst"
 institute: "Neath Port Talbot County Borough Council"
 date: "28/09/2023"
 output:
@@ -14,25 +14,34 @@ output:
       countIncrementalSlides: false
 
 ---
-<!-- Commented out yaml saved for later -->
-<!-- output: -->
-<!--   xaringan::moon_reader: -->
+class: middle, center
+<style>
 
-<!--     nature: -->
-<!--       countIncrementalSlides: false -->
-<!--       titleSlideClass: ["left", "middle", "inverse"] -->
-<!--       highlightLines: true -->
-<!--       highlightStyle: solarized-dark -->
-<!--     includes: -->
-<!--       in_header: header.html -->
+.remark-slide-content > h1 {
+  font-size: 40px;
+  color: #50ab44 /*hex key for darkest greenest colour in NPT logo */
+}
+.remark-slide-content > h2 {
+  font-size: 28px;
+  color: #0595c7 /*hex key for darkest bluest colour in NPT logo */
+}
+
+</style>
 
 # Topics
 
-## Setting and embedding Data Standards
+--
+
+
+## Embedding Address Data Standards
+
+--
 
 ## Attaching UPRN to addresses using Machine-Learning
 
-## Open-Source tools to solve common challenges involving address data
+--
+
+## Tools we use
 
 
 ```{r setup, include=FALSE}
@@ -56,51 +65,75 @@ xaringanExtra::use_logo(
 
 class: center, middle
 
-# Setting and embedding Data Standards
+# Embedding Data Standards
 
 ---
+# What Address Data Standards?
+
+--
+
+## GeoPlace
+
+--
+
+- central source for UK addresses and streets, working with over 300 councils across England and Wales which have a staturoy responsibility for approving and creating addresses. 46.5 million addresses, 2 million records update monthly. 
+
+--
+
+<ins>Stringent data quality process</ins>
+
+- Match against records from several authoritative government property/address databases.
+
+- Validation and assurance process that runs 100s of checks on each record before being accepted into the database.
+
+--
+
+- Data is enriched and transformed by adding best attributes from source datasets to enhance quality of overall product.
+
+- The Unique Property Reference Number (UPRN) is the unique identifier for every addressable location across the UK. Every addressable location in Great Britain is uniquely identified by the Unique Property Reference Number (UPRN). 
+
+---
+class: center, middle
 
 # Situation
 
 --
 
-## Large volume of Data
+## Large volume of Address Data
+
+Councils have a large number of different departments, including Social Care, Environment, Digital Services.
+Address data is vital to the delivery of all these functions. We do not know the depth and breadth of applications that use address data and how they use address data. 
 
 --
 
 ## Disjointed
 
+Duplicate Address data held in different places, with no immediate way to link across departments. 
 --
 
 ## Accessiblity
-
+Address data can be used by a wide variety of different applications, that may be known to exist by a few people or the address data is hard to share. 
 --
 
 ## Quality
+Address Data in the council meets varying degrees of fitness for purpose. We don't know the full picture of address data quality across the council.
 
 ---
+class: middle, center
 
-# Motivation
-
---
-
-## Setting Data Standards would improve
+# Motivation - Embedding Data Standards would improve
 
 --
 
-### Accessibility of Data
+## Accessibility of Data
 
 --
 
-### Data Linkage
+## Data Linkage
 
 --
 
-* Internal
-
---
-
-- External
+Internal/External
 
 ---
 class: middle, center

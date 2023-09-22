@@ -3,7 +3,7 @@
   <head>
     <title>Leveraging Address Data in a Local Authority Council</title>
     <meta charset="utf-8" />
-    <meta name="author" content="        Dr. Yasmin Friedmann - Head of Data  Rhiannon Elias - Data Analyst" />
+    <meta name="author" content="           Dr. Yasmin Friedmann - Head of Data  Rhiannon Elias - Data Analyst" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
@@ -28,7 +28,7 @@ class: center, middle, inverse, title-slide
 ## Tanaka Takawira - Senior Data Analyst
 ]
 .author[
-### <br><br><br><br><br><br><br><br>Dr. Yasmin Friedmann - Head of Data<br> Rhiannon Elias - Data Analyst
+### <br><br><br><br><br><br><br><br><br><br><br>Dr. Yasmin Friedmann - Head of Data<br> Rhiannon Elias - Data Analyst
 ]
 .institute[
 ### Neath Port Talbot County Borough Council
@@ -39,25 +39,34 @@ class: center, middle, inverse, title-slide
 
 ---
 
-&lt;!-- Commented out yaml saved for later --&gt;
-&lt;!-- output: --&gt;
-&lt;!--   xaringan::moon_reader: --&gt;
+&lt;!-- class: middle, center --&gt;
+&lt;!-- &lt;style&gt; --&gt;
 
-&lt;!--     nature: --&gt;
-&lt;!--       countIncrementalSlides: false --&gt;
-&lt;!--       titleSlideClass: ["left", "middle", "inverse"] --&gt;
-&lt;!--       highlightLines: true --&gt;
-&lt;!--       highlightStyle: solarized-dark --&gt;
-&lt;!--     includes: --&gt;
-&lt;!--       in_header: header.html --&gt;
+&lt;!-- .remark-slide-content &gt; h1 { --&gt;
+&lt;!--   font-size: 40px; --&gt;
+&lt;!--   color: #50ab44 /*hex key for darkest greenest colour in NPT logo */ --&gt;
+&lt;!-- } --&gt;
+&lt;!-- .remark-slide-content &gt; h2 { --&gt;
+&lt;!--   font-size: 28px; --&gt;
+&lt;!--   color: #0595c7 /*hex key for darkest bluest colour in NPT logo */ --&gt;
+&lt;!-- } --&gt;
 
-# Topics
+&lt;!-- &lt;/style&gt; --&gt;
 
-## Setting and embedding Data Standards
+&lt;!-- # Topics --&gt;
 
-## Attaching UPRN to addresses using Machine-Learning
+&lt;!-- -- --&gt;
 
-## Open-Source tools to solve common challenges involving address data
+
+&lt;!-- ## Embedding Address Data Standards --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- ## Attaching UPRN to addresses using Machine-Learning --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- ## Tools we use --&gt;
 
 
 
@@ -102,126 +111,153 @@ bottom:-1.5em;left:1em;
 
 class: center, middle
 
-# Setting and embedding Data Standards
+# Embedding Data Standards
 
 ---
+# What Address Data Standards?
+
+## GeoPlace
+
+--
+
+- Central source for UK addresses and streets, working with over 300 councils across England and Wales which have a statutory responsibility for approving and creating addresses. 46.5 million addresses, 2 million records update monthly. 
+
+--
+
+&lt;ins&gt;Stringent data quality process&lt;/ins&gt;
+
+- Matches against records from several authoritative government property/address databases.
+
+- Validation and assurance process that runs 100s of checks on each record before being accepted into the database.
+
+--
+
+- Data is enriched and transformed by adding best attributes from source datasets to enhance quality of overall product.
+
+- The Unique Property Reference Number (UPRN) is the unique identifier for every addressable location across the UK. Every addressable location in Great Britain is uniquely identified by the Unique Property Reference Number (UPRN). 
+
+---
+class: center, middle
 
 # Situation
 
 --
 
-## Large volume of Data
+## Large volume of Address Data
+
+NPTCBC has approximately 350 known applications, many using address data. Address data exists in many forms across the council including spreadsheets and word documents across departments including Social Care, Environment, Digital Services.
+&lt;!-- Councils have a large number of different departments, including Social Care, Environment, Digital Services. --&gt;
+&lt;!-- Address data is vital to the delivery of all these functions. We do not know the depth and breadth of applications that use address data and how they use address data.  --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- ## Disjointed --&gt;
+
+&lt;!-- Duplicate Address data held in different places, with no immediate way to link across departments.  --&gt;
+&lt;!-- -- --&gt;
 
 --
 
-## Disjointed
 
---
+## Standards
+There is no agreed/mandated standard in place across the council with respect to address recording/validation, and the concepts of UPRN/USRN or, for that matter, the existence of the central repository are not known to everybody who records such information.
 
-## Accessiblity
-
+&lt;!-- ## Accessiblity --&gt;
+&lt;!-- Address data can be used by a wide variety of different applications, that may be known to exist by a few people or the address data is hard to share.  --&gt;
 --
 
 ## Quality
+Address Data in the council meets varying degrees of fitness for purpose. We don't yet know the full picture of address data quality across the council. 
 
 ---
+class: top, center
+&lt;style&gt;
 
-# Motivation
+.remark-slide-content &gt; h1 {   font-size: 35px;   margin-top: -250px; }
 
---
-
-## Setting Data Standards would improve
-
---
-
-### Accessibility of Data
+&lt;/style&gt;
+# Motivation - Embedding Data Standards would improve:
 
 --
 
-### Data Linkage
+## Staff awareness
+
+Promotion of the concept of a standardised address format to all staff, and signposting to training resources would dissemminate the established address data standards. 
+--
+
+## Address Data Pipeline
+
+help establish a single line of Enquiry for address data needs.
 
 --
 
-* Internal
+## Data Linkage
+
+Integration of all current applications that use addresses within the council with the LLPG for local addresses and NPG for national addresses. The integration will add UPRN, USRN, and possibly other useful data to any of the datasets, enabling linkage across teams and enabling sharing of data.  
 
 --
 
-- External
+Embed a requirement for linking addresses to the LLPG in the case of local addresses and to the OS addressbase repository for national addresses and daily updates for all procured and internally developed systems in future. 
+
+--
+
+## Data Quality
+
+Ascribing to these data standards would ensure fitness for purpose of addresss data across many applications. 
 
 ---
-class: middle, center
-
-# Embedding Address Data Standards
-
---
-
-## GeoPlace/OS AddressBase
+class: top
+# What are we Doing/Aiming to do?
 
 --
 
-- Local Land and Property Gazetteer
+## Self-Service Address App
 
---
+* Address matching for addresses already collected:
+ + Address matching algoriths to attach UPRNs to incomplete/spurious addresses. 
+ + Literature review on best approach and practice 
 
-- OS Data Hub
+* Single point of contact that unifies many lines of enquiries around address data
 
---
+* User centered designed access to suit of address products/standards
+ + OS Data Hub, LLPG, Royal Mail - PAF, Metadata repository. 
+ 
+## Evangelise
 
-## NUAR - MUDDY standards
+* Promote the concept of a standardized address format to all staff, and signpost to training resources.
 
---
+## Standard Operating Procedure (SOP)
+Create an SOP of how to record and validate addresses, UPRNs and USRNs in the day-to-day work on spreadsheets or similar until automation. 
 
-## PAF - Royal Mail, INSPIRE
-
---
-
-## Metadata Repository
-
+## Data Sharing
+Explore the possibility of data sharing of the LLPG with neighbouring councils. 
 ---
 
-# Attaching UPRN to addresses using Machine-Learning
+# Examples so Far
 
---
+## Expansion letters
+A key unit within NPTCBC needed to distribute letters to particular areas of deprivation. 
 
-## Unique Property Reference Number (UPRN)
+* Programmatically generated list of addresses from Lower Layer Super Output Areas (LSOAs) based on deprivation scores.
+* OS Data HUB APIs and LLPG used as data sources
+* Address letter outputs ascribed to Royal Mail PAF and Gov notify. 
 
---
+## Data Quality Assessments
+We have programmatically produced data quality assessment reports on the address data of various areas, such as social care.
+  * Data quality Dimensions
+  * give view of fitness for purpose
 
-## Address-Matching Algorithms
-
+## Literature Review
+Comparison of literature available on address matching algorithms
+ *  ASSIGN, OS Places API, addressMatchR,IdoxMatch's Aligned Assets platform, ONS address index (AI) project
+ 
 ---
+&lt;style&gt;
 
-# Address-Matching Algorithms
+.remark-slide-content &gt; h1 {   font-size: 35px;   margin-top: -250px; }
 
-![](images/adrs_matching_diagram.png)
-
----
-
-# Literature Review
-
---
-
-## ASSIGN 
-
---
-
-## OS Places API
-
---
-
-## addressMatchR
-
---
-
-## IdoxMatch's Aligned Assets platform
-
---
-
-## ONS address index (AI) project
-
----
-
-# Analytical tools for our challenges with Address Data
+&lt;/style&gt;
+# Tools we use
 &lt;!-- Default css theme in YAML needed for pull-left/pull-right to work --&gt;
 
 --
@@ -229,7 +265,7 @@ class: middle, center
 
 .pull-left[
 
-## Posit
+## Rstudio
 
 &lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1280px-R_logo.svg.png" width="100px" height="100px" /&gt;
 
@@ -246,20 +282,28 @@ class: middle, center
 
 ]
 
----
-# Why?
+--
+&lt;p style="text-align: center;"&gt;
+&lt;ins&gt;Why?&lt;/ins&gt;
+&lt;/p&gt;
+--
 
 
 .left-column[
 ## Experience
 
-
+## Mature
 
 ## Open-Source
 
-## Capability
+## Powerful
+
+## &lt;span style="color:#0595c7"&gt;Capability&lt;/span&gt;
+
+* It produced this presentation !
 ]
 
+--
 
 .right-column[
 
@@ -270,37 +314,13 @@ leaflet() %&gt;% addTiles() %&gt;%
   setView(-93.65, 42.0285, zoom = 17)
 ```
 
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-2520e3023b9781e149a8" style="width:100%;height:288px;"></div>
-<script type="application/json" data-for="htmlwidget-2520e3023b9781e149a8">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-49808f2569eb88722b53" style="width:100%;height:144px;"></div>
+<script type="application/json" data-for="htmlwidget-49808f2569eb88722b53">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
 
 ]
 
 ---
-# Other Tools
-
---
-.pull-left[
-
-## PostGIS
-
-&lt;img src="https://upload.wikimedia.org/wikipedia/en/6/60/PostGIS_logo.png" width="100px" height="100px" /&gt;
-
-
-]
-
---
-
-.pull-right[
-
-## ArcGis/QGis
-.pull-left[
-&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/ArcGIS_logo.png/180px-ArcGIS_logo.png" width="100px" height="100px" /&gt;
-]
-
-.pull-right[
-&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/QGIS_logo%2C_2017.svg/1920px-QGIS_logo%2C_2017.svg.png" width="100px" height="100px" /&gt;
-]
-]
+# Interaction with audience
 
 ---
 class: middle, center
