@@ -59,7 +59,22 @@ xaringanExtra::use_logo(
 )
 ```
 
+---
+# Aims
 
+--
+
+## Discuss
+
+ + Embedding Address Data Standards
+
+ + Where we are, What we've done and what we're aiming for
+ 
+ + Tools we use
+
+--
+
+## Invite Contribution from peers, share experiences and good practice
 
 ---
 
@@ -71,6 +86,10 @@ class: center, middle
 # What Address Data Standards?
 
 ## GeoPlace
+
+--
+
+* UK Address Data Standards
 
 --
 
@@ -91,7 +110,7 @@ class: center, middle
 - The Unique Property Reference Number (UPRN) is the unique identifier for every addressable location across the UK. Every addressable location in Great Britain is uniquely identified by the Unique Property Reference Number (UPRN). 
 
 ---
-class: center, middle
+
 
 # Situation
 
@@ -124,7 +143,7 @@ There is no agreed/mandated standard in place across the council with respect to
 Address Data in the council meets varying degrees of fitness for purpose. We don't yet know the full picture of address data quality across the council. 
 
 ---
-class: top, center
+
 <style>
 
 .remark-slide-content > h1 {   font-size: 35px;   margin-top: -250px; }
@@ -151,40 +170,82 @@ Integration of all current applications that use addresses within the council wi
 
 --
 
-Embed a requirement for linking addresses to the LLPG in the case of local addresses and to the OS addressbase repository for national addresses and daily updates for all procured and internally developed systems in future. 
-
---
-
 ## Data Quality
 
-Ascribing to these data standards would ensure fitness for purpose of addresss data across many applications. 
+Ascribing to these data standards would ensure fitness for purpose of addresss data across many applications, increase options to leverage the data and reduce time to understand data.
 
 ---
-class: top
-# What are we Doing/Aiming to do?
+
+# What are we Doing/Aiming to do? Part 1
 
 --
 
 ## Self-Service Address App
 
 * Address matching for addresses already collected:
- + Address matching algoriths to attach UPRNs to incomplete/spurious addresses. 
- + Literature review on best approach and practice 
 
-* Single point of contact that unifies many lines of enquiries around address data
+ + Address matching algoriths to attach UPRNs to incomplete/spurious addresses. 
+ 
+ + Literature review on best approach and practice for address matching algorithms
+ 
+--
+
+* Prescriptive approach to capturing new addresses.
+
+ + we create the way data is presented and standardised, eg getting new address to send in a letter format.
+
+ + Single point of contact that unifies many lines of enquiries around address data
+
+--
+
 
 * User centered designed access to suit of address products/standards
- + OS Data Hub, LLPG, Royal Mail - PAF, Metadata repository. 
+
+ + OS Data Hub, LLPG, Royal Mail - PAF, Metadata repository.
  
-## Evangelise
+--
+
+<br> 
+* What would you like to see in a self-service address data dashboard/app?
+
+--
+
+ + What other dashboard would you need?
+ 
+---
+
+# Address Matching Algorithms
+
+--
+
+![](images/adrs_matching_diagram.png)
+
+---
+
+# What are we Doing/Aiming to do? Part 2
+
+--
+
+## Champion
 
 * Promote the concept of a standardized address format to all staff, and signpost to training resources.
+
+--
+
 
 ## Standard Operating Procedure (SOP)
 Create an SOP of how to record and validate addresses, UPRNs and USRNs in the day-to-day work on spreadsheets or similar until automation. 
 
+--
+
 ## Data Sharing
 Explore the possibility of data sharing of the LLPG with neighbouring councils. 
+
+--
+
+## Data Quality Assessments
+
+Using the data quality dimensions from the Data Quality Hub, we have commenced some Data Quality Reports on address datasets within various domains across the business. This is helping us understand the data quality and the cost/benefit on various data quality improvement actions such as data cleaning or address matching to a UPRN. For example, de-duplicating and completeness (eg, filling in missing towns in otherwise complete addresses)
 ---
 
 # Examples so Far
@@ -241,24 +302,20 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/c/
 ]
 
 --
-<p style="text-align: center;">
-<ins>Why?</ins>
-</p>
+<p style="text-align: center;color:#0595c7"><ins>Why?</ins></p>
 --
-
-
 .left-column[
-## Experience
+* Experience
 
-## Mature
+* Mature
 
-## Open-Source
+* Open-Source
 
-## Powerful
+* Powerful
 
-## <span style="color:#0595c7">Capability</span>
+* Capability
 
-* It produced this presentation !
+ + It produced this presentation !
 ]
 
 --
