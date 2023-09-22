@@ -14,34 +14,34 @@ output:
       countIncrementalSlides: false
 
 ---
-class: middle, center
-<style>
+<!-- class: middle, center -->
+<!-- <style> -->
 
-.remark-slide-content > h1 {
-  font-size: 40px;
-  color: #50ab44 /*hex key for darkest greenest colour in NPT logo */
-}
-.remark-slide-content > h2 {
-  font-size: 28px;
-  color: #0595c7 /*hex key for darkest bluest colour in NPT logo */
-}
+<!-- .remark-slide-content > h1 { -->
+<!--   font-size: 40px; -->
+<!--   color: #50ab44 /*hex key for darkest greenest colour in NPT logo */ -->
+<!-- } -->
+<!-- .remark-slide-content > h2 { -->
+<!--   font-size: 28px; -->
+<!--   color: #0595c7 /*hex key for darkest bluest colour in NPT logo */ -->
+<!-- } -->
 
-</style>
+<!-- </style> -->
 
-# Topics
+<!-- # Topics -->
 
---
+<!-- -- -->
 
 
-## Embedding Address Data Standards
+<!-- ## Embedding Address Data Standards -->
 
---
+<!-- -- -->
 
-## Attaching UPRN to addresses using Machine-Learning
+<!-- ## Attaching UPRN to addresses using Machine-Learning -->
 
---
+<!-- -- -->
 
-## Tools we use
+<!-- ## Tools we use -->
 
 
 ```{r setup, include=FALSE}
@@ -70,19 +70,17 @@ class: center, middle
 ---
 # What Address Data Standards?
 
---
-
 ## GeoPlace
 
 --
 
-- central source for UK addresses and streets, working with over 300 councils across England and Wales which have a staturoy responsibility for approving and creating addresses. 46.5 million addresses, 2 million records update monthly. 
+- Central source for UK addresses and streets, working with over 300 councils across England and Wales which have a statutory responsibility for approving and creating addresses. 46.5 million addresses, 2 million records update monthly. 
 
 --
 
 <ins>Stringent data quality process</ins>
 
-- Match against records from several authoritative government property/address databases.
+- Matches against records from several authoritative government property/address databases.
 
 - Validation and assurance process that runs 100s of checks on each record before being accepted into the database.
 
@@ -101,114 +99,119 @@ class: center, middle
 
 ## Large volume of Address Data
 
-Councils have a large number of different departments, including Social Care, Environment, Digital Services.
-Address data is vital to the delivery of all these functions. We do not know the depth and breadth of applications that use address data and how they use address data. 
+NPTCBC has approximately 350 known applications, many using address data. Address data exists in many forms across the council including spreadsheets and word documents across departments including Social Care, Environment, Digital Services.
+<!-- Councils have a large number of different departments, including Social Care, Environment, Digital Services. -->
+<!-- Address data is vital to the delivery of all these functions. We do not know the depth and breadth of applications that use address data and how they use address data.  -->
+
+<!-- -- -->
+
+<!-- ## Disjointed -->
+
+<!-- Duplicate Address data held in different places, with no immediate way to link across departments.  -->
+<!-- -- -->
 
 --
 
-## Disjointed
 
-Duplicate Address data held in different places, with no immediate way to link across departments. 
---
+## Standards
+There is no agreed/mandated standard in place across the council with respect to address recording/validation, and the concepts of UPRN/USRN or, for that matter, the existence of the central repository are not known to everybody who records such information.
 
-## Accessiblity
-Address data can be used by a wide variety of different applications, that may be known to exist by a few people or the address data is hard to share. 
+<!-- ## Accessiblity -->
+<!-- Address data can be used by a wide variety of different applications, that may be known to exist by a few people or the address data is hard to share.  -->
 --
 
 ## Quality
-Address Data in the council meets varying degrees of fitness for purpose. We don't know the full picture of address data quality across the council.
+Address Data in the council meets varying degrees of fitness for purpose. We don't yet know the full picture of address data quality across the council. 
 
 ---
-class: middle, center
+class: top, center
+<style>
 
-# Motivation - Embedding Data Standards would improve
+.remark-slide-content > h1 {   font-size: 35px;   margin-top: -250px; }
+
+</style>
+# Motivation - Embedding Data Standards would improve:
 
 --
 
-## Accessibility of Data
+## Staff awareness
+
+Promotion of the concept of a standardised address format to all staff, and signposting to training resources would dissemminate the established address data standards. 
+--
+
+## Address Data Pipeline
+
+help establish a single line of Enquiry for address data needs.
 
 --
 
 ## Data Linkage
 
+Integration of all current applications that use addresses within the council with the LLPG for local addresses and NPG for national addresses. The integration will add UPRN, USRN, and possibly other useful data to any of the datasets, enabling linkage across teams and enabling sharing of data.  
+
 --
 
-Internal/External
+Embed a requirement for linking addresses to the LLPG in the case of local addresses and to the OS addressbase repository for national addresses and daily updates for all procured and internally developed systems in future. 
+
+--
+
+## Data Quality
+
+Ascribing to these data standards would ensure fitness for purpose of addresss data across many applications. 
 
 ---
-class: middle, center
-
-# Embedding Address Data Standards
-
---
-
-## GeoPlace/OS AddressBase
+class: top
+# What are we Doing/Aiming to do?
 
 --
 
-- Local Land and Property Gazetteer
+## Self-Service Address App
 
---
+* Address matching for addresses already collected:
+ + Address matching algoriths to attach UPRNs to incomplete/spurious addresses. 
+ + Literature review on best approach and practice 
 
-- OS Data Hub
+* Single point of contact that unifies many lines of enquiries around address data
 
---
+* User centered designed access to suit of address products/standards
+ + OS Data Hub, LLPG, Royal Mail - PAF, Metadata repository. 
+ 
+## Evangelise
 
-## NUAR - MUDDY standards
+* Promote the concept of a standardized address format to all staff, and signpost to training resources.
 
---
+## Standard Operating Procedure (SOP)
+Create an SOP of how to record and validate addresses, UPRNs and USRNs in the day-to-day work on spreadsheets or similar until automation. 
 
-## PAF - Royal Mail, INSPIRE
-
---
-
-## Metadata Repository
-
+## Data Sharing
+Explore the possibility of data sharing of the LLPG with neighbouring councils. 
 ---
 
-# Attaching UPRN to addresses using Machine-Learning
+# Examples so Far
 
---
+## Expansion letters
+A key unit within NPTCBC needed to distribute letters to particular areas of deprivation. 
 
-## Unique Property Reference Number (UPRN)
+* Programmatically generated list of addresses from Lower Layer Super Output Areas (LSOAs) based on deprivation scores.
+* OS Data HUB APIs and LLPG used as data sources
+* Address letter outputs ascribed to Royal Mail PAF and Gov notify. 
 
---
+## Data Quality Assessments
+We have programmatically produced data quality assessment reports on the address data of various areas, such as social care.
+  * Data quality Dimensions
+  * give view of fitness for purpose
 
-## Address-Matching Algorithms
-
+## Literature Review
+Comparison of literature available on address matching algorithms
+ *  ASSIGN, OS Places API, addressMatchR,IdoxMatch's Aligned Assets platform, ONS address index (AI) project
+ 
 ---
+<style>
 
-# Address-Matching Algorithms
+.remark-slide-content > h1 {   font-size: 35px;   margin-top: -250px; }
 
-![](images/adrs_matching_diagram.png)
-
----
-
-# Literature Review
-
---
-
-## ASSIGN 
-
---
-
-## OS Places API
-
---
-
-## addressMatchR
-
---
-
-## IdoxMatch's Aligned Assets platform
-
---
-
-## ONS address index (AI) project
-
----
-
-# Analytical tools for our challenges with Address Data
+</style>
+# Tools we use
 <!-- Default css theme in YAML needed for pull-left/pull-right to work -->
 
 --
@@ -216,7 +219,7 @@ class: middle, center
 
 .pull-left[
 
-## Posit
+## Rstudio
 
 ``` {r posit_image,echo=FALSE,  out.height = "100px", out.width = "100px"}
 knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1280px-R_logo.svg.png")
@@ -237,24 +240,32 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/c/
 
 ]
 
----
-# Why?
+--
+<p style="text-align: center;">
+<ins>Why?</ins>
+</p>
+--
 
 
 .left-column[
 ## Experience
 
-
+## Mature
 
 ## Open-Source
 
-## Capability
+## Powerful
+
+## <span style="color:#0595c7">Capability</span>
+
+* It produced this presentation !
 ]
 
+--
 
 .right-column[
 
-```{r out.width='100%', fig.height=4, fig.width=4}
+```{r out.width='100%', fig.height=2, fig.width=2}
 library(leaflet)
 leaflet() %>% addTiles() %>%
   setView(-93.65, 42.0285, zoom = 17)
@@ -263,37 +274,7 @@ leaflet() %>% addTiles() %>%
 ]
 
 ---
-# Other Tools
-
---
-.pull-left[
-
-## PostGIS
-
-``` {r postgis,echo=FALSE,  out.height = "100px", out.width = "100px"}
-knitr::include_graphics("https://upload.wikimedia.org/wikipedia/en/6/60/PostGIS_logo.png")
-```
-
-
-]
-
---
-
-.pull-right[
-
-## ArcGis/QGis
-.pull-left[
-``` {r arcgis,echo=FALSE, out.height = "100px", out.width = "100px"}
-knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/ArcGIS_logo.png/180px-ArcGIS_logo.png")
-```
-]
-
-.pull-right[
-``` {r Qgis,echo=FALSE, out.height = "100px", out.width = "100px"}
-knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/QGIS_logo%2C_2017.svg/1920px-QGIS_logo%2C_2017.svg.png")
-```
-]
-]
+# Interaction with audience
 
 ---
 class: middle, center
