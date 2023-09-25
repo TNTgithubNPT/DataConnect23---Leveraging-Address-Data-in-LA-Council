@@ -1,7 +1,7 @@
 ---
-title: "Leveraging Address Data in a Local Authority Council"
-subtitle: "Tanaka Takawira - Senior Data Analyst" 
-author: "<br><br><br><br><br><br><br><br><br><br><br>Dr. Yasmin Friedmann - Head of Data<br> Rhiannon Elias - Data Analyst"
+title: "<span style=\"font-size:38px;color:#50ab44\">Leveraging Address Data in a Local Authority Council</span>"
+subtitle: "<span style=\"font-size:32px;color:#0595c7\">Tanaka Takawira - Senior Data Analyst</span>" 
+author: "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Dr. Yasmin Friedmann - Head of Data<br> Rhiannon Elias - Data Analyst"
 institute: "Neath Port Talbot County Borough Council"
 date: "28/09/2023"
 output:
@@ -12,37 +12,9 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-
 ---
-<!-- class: middle, center -->
-<!-- <style> -->
 
-<!-- .remark-slide-content > h1 { -->
-<!--   font-size: 40px; -->
-<!--   color: #50ab44 /*hex key for darkest greenest colour in NPT logo */ -->
-<!-- } -->
-<!-- .remark-slide-content > h2 { -->
-<!--   font-size: 28px; -->
-<!--   color: #0595c7 /*hex key for darkest bluest colour in NPT logo */ -->
-<!-- } -->
-
-<!-- </style> -->
-
-<!-- # Topics -->
-
-<!-- -- -->
-
-
-<!-- ## Embedding Address Data Standards -->
-
-<!-- -- -->
-
-<!-- ## Attaching UPRN to addresses using Machine-Learning -->
-
-<!-- -- -->
-
-<!-- ## Tools we use -->
-
+# Aims
 
 ```{r setup, include=FALSE}
 library(xaringanExtra)
@@ -58,9 +30,6 @@ xaringanExtra::use_logo(
   position=css_position(top = NULL, right = NULL, left = "1em", bottom = "-1.5em")
 )
 ```
-
----
-# Aims
 
 --
 
@@ -89,7 +58,7 @@ class: center, middle
 
 --
 
-* UK Address Data Standards
+* Source of UK Address Data Standards
 
 --
 
@@ -133,21 +102,22 @@ NPTCBC has approximately 350 known applications, many using address data. Addres
 
 
 ## Standards
-There is no agreed/mandated standard in place across the council with respect to address recording/validation, and the concepts of UPRN/USRN or, for that matter, the existence of the central repository are not known to everybody who records such information.
-
+There is a tremendous opportunity for an agreed/mandated address data standard to be put in place across the council for the first time. This includes ubiquity of recording/validating addresses and the concepts of UPRN and USRN, emanating from a central address repository known to most (if not all) who record addresses.
 <!-- ## Accessiblity -->
 <!-- Address data can be used by a wide variety of different applications, that may be known to exist by a few people or the address data is hard to share.  -->
 --
 
 ## Quality
-Address Data in the council meets varying degrees of fitness for purpose. We don't yet know the full picture of address data quality across the council. 
+Address Data in the council meets varying degrees of fitness for purpose. There's also a tremendous opportunity to elevate the breadth and depth of understanding the address data quality across the council. 
 
 ---
-
 <style>
-
-.remark-slide-content > h1 {   font-size: 35px;   margin-top: -250px; }
-
+.remark-slide-content {
+  padding-top: -20px;
+  padding-left: -20px;
+  padding-right: -20px;
+  padding-bottom: -20px
+}
 </style>
 # Motivation - Embedding Data Standards would improve:
 
@@ -155,24 +125,41 @@ Address Data in the council meets varying degrees of fitness for purpose. We don
 
 ## Staff awareness
 
-Promotion of the concept of a standardised address format to all staff, and signposting to training resources would dissemminate the established address data standards. 
---
-
-## Address Data Pipeline
-
-help establish a single line of Enquiry for address data needs.
-
---
-
-## Data Linkage
-
-Integration of all current applications that use addresses within the council with the LLPG for local addresses and NPG for national addresses. The integration will add UPRN, USRN, and possibly other useful data to any of the datasets, enabling linkage across teams and enabling sharing of data.  
-
+Promotion of the concept of a standardised address format, and signposting to training resources would dissemminate the established address data standards. Staff awareness will improve quality of address data inputted by causing people to be more careful.
 --
 
 ## Data Quality
 
-Ascribing to these data standards would ensure fitness for purpose of addresss data across many applications, increase options to leverage the data and reduce time to understand data.
+Ascribing to these data standards would ensure fitness for purpose of addresss data across many applications, increase options to leverage the data and reduce time to understand data. The source of data will always be Geoplace/LLPG, a quality assured source.
+
+--
+<p style="text-align: center;color:#0595c7"><ins>Example</ins></p>
+.pull-left[
+![](images/ryl_ml_ltr_exmpl.png)
+]
+
+.pull-right[Royal Mail require the following to deliver in expected time frames:
+* 1 premise element
+* 1 thoroughfare element
+* 1 locality element
+* the postcode as a minimum
+
+Myany departments would have difficulty getting information to people for addresses that don't meet this.
+]
+---
+
+# Motivation - Embedding Data Standards would improve:
+
+## Data Linkage
+
+Integration of all current applications that use addresses within the council with the LLPG for local addresses and NPG for national addresses. The integration will add UPRN, USRN, and possibly other useful data to any of the datasets, enabling linkage across teams and enabling sharing of data. UPRN is gold standard, various data quality analysis/measurements fills the gap. 
+
+![](images/nptcbc_senior_management_structure.png)
+
+--
+
+Once we have done embedding, we will be able to link on an address. As you can imagine, it's very difficult to know precise immediate impact on each business area, but it certainly makes us more ***resilient*** to any change in the future.
+
 
 ---
 
@@ -182,19 +169,13 @@ Ascribing to these data standards would ensure fitness for purpose of addresss d
 
 ## Self-Service Address App
 
-* Address matching for addresses already collected:
-
- + Address matching algoriths to attach UPRNs to incomplete/spurious addresses. 
- 
- + Literature review on best approach and practice for address matching algorithms
- 
 --
 
 * Prescriptive approach to capturing new addresses.
 
  + we create the way data is presented and standardised, eg getting new address to send in a letter format.
 
- + Single point of contact that unifies many lines of enquiries around address data
+ + Single point of contact that unifies many ad-hoc queries around address data
 
 --
 
@@ -213,22 +194,60 @@ Ascribing to these data standards would ensure fitness for purpose of addresss d
  + What other dashboard would you need?
  
 ---
+```{css, echo=FALSE}
+.link-style1 a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.link-style2 a {
+ color: blue;
+}
+
+
+```
 
 # Address Matching Algorithms
 
+
 --
 
-![](images/adrs_matching_diagram.png)
+* It's easy to standardise new addresses - EG, source from OS AddressBase
 
+--
+
+* Enhancing quality of current/historic addresses is a challenge. EG, linking with OS AddressBase. 
+
+.image-adrsalg[.center[![](images/adrs_matching_diagram.png)]]
+.center[.link-style1[[by Placekey](https://www.placekey.io/blog/address-matching#:~:text=One%20of%20the%20easiest%20ways,second%20character%2C%20and%20so%20on.)]]
+
+--
+
+## Literature Review
+
+ *  ASSIGN, OS Places API, addressMatchR,IdoxMatch's Aligned Assets platform, ONS address index (AI) project
+
+ * This is what we're working on so far.
 ---
+<style>
 
+.remark-slide-content > h1:first-of-type {   font-size: 5px;   margin-top: -250px; }
+
+.remark-slide-content {
+  padding-top: -100px;
+  padding-left: -100px;
+  padding-right: -100px;
+  padding-bottom: -100px;
+}
+
+</style>
 # What are we Doing/Aiming to do? Part 2
 
 --
 
 ## Champion
 
-* Promote the concept of a standardized address format to all staff, and signpost to training resources.
+Promote the concept of a standardized address format to all staff, and signpost to training resources.
 
 --
 
@@ -238,8 +257,8 @@ Create an SOP of how to record and validate addresses, UPRNs and USRNs in the da
 
 --
 
-## Data Sharing
-Explore the possibility of data sharing of the LLPG with neighbouring councils. 
+## Data Linking
+Linking datasets across various domains so that the council can have a broader view of council residents' experience. 
 
 --
 
@@ -262,10 +281,6 @@ We have programmatically produced data quality assessment reports on the address
   * Data quality Dimensions
   * give view of fitness for purpose
 
-## Literature Review
-Comparison of literature available on address matching algorithms
- *  ASSIGN, OS Places API, addressMatchR,IdoxMatch's Aligned Assets platform, ONS address index (AI) project
- 
 ---
 <style>
 
