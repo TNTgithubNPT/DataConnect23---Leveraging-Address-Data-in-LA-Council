@@ -44,6 +44,19 @@ class: center, middle, inverse, title-slide
 
 
 
+&lt;style type="text/css"&gt;
+.link-style1 a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.link-style2 a {
+ color: blue;
+}
+
+
+&lt;/style&gt;
+
 <div>
 <style type="text/css">.xaringan-extra-logo {
 width: 110px;
@@ -81,14 +94,27 @@ bottom:-1.5em;left:1em;
 --
 
 ## Discuss
-
+   &lt;br&gt;
  + Embedding Address Data Standards
-
- + Where we are, What we've done and what we're aiming for
- 
- + Tools we use
+   &lt;br&gt;
+   &lt;br&gt;
 
 --
+   
+ + Where we are, What we've done and what we're aiming for
+   &lt;br&gt;
+   &lt;br&gt;
+   
+--
+   
+ + Methods/Tools we use
+
+--
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
 
 ## Invite Contribution from peers, share experiences and good practice
 
@@ -135,15 +161,9 @@ class: center, middle
 ## Large volume of Address Data
 
 NPTCBC has approximately 350 known applications, many using address data. Address data exists in many forms across the council including spreadsheets and word documents across departments including Social Care, Environment, Digital Services.
-&lt;!-- Councils have a large number of different departments, including Social Care, Environment, Digital Services. --&gt;
-&lt;!-- Address data is vital to the delivery of all these functions. We do not know the depth and breadth of applications that use address data and how they use address data.  --&gt;
 
-&lt;!-- -- --&gt;
-
-&lt;!-- ## Disjointed --&gt;
-
-&lt;!-- Duplicate Address data held in different places, with no immediate way to link across departments.  --&gt;
-&lt;!-- -- --&gt;
+???
+(after reading) Wealth of address data being used
 
 --
 
@@ -173,11 +193,19 @@ Address Data in the council meets varying degrees of fitness for purpose. There'
 ## Staff awareness
 
 Promotion of the concept of a standardised address format, and signposting to training resources would dissemminate the established address data standards. Staff awareness will improve quality of address data inputted by causing people to be more careful.
+
+???
+***Staff Awareness*** -  Benefits of awareness depends on person, if it's on digital services, anytime we write a program that accepts address will always be dropdown and not free text. This is for people who create apps
+For people who input data, if they're aware of importance of standards, will be more aware when inputting data, will be more careful to write in correct standard and write UPRN. 
+
 --
 
 ## Data Quality
 
-Ascribing to these data standards would ensure fitness for purpose of addresss data across many applications, increase options to leverage the data and reduce time to understand data. The source of data will always be Geoplace/LLPG, a quality assured source.
+Ascribing to these data standards would ensure fitness for purpose of addresss data across many applications, increase options to leverage the data and reduce time to understand data.
+
+???
+***Data Quality*** Source of data will always be geoplace - people always refer to that. Wherever someone can see an address they can access LLPG or Geoplace
 
 --
 &lt;p style="text-align: center;color:#0595c7"&gt;&lt;ins&gt;Example&lt;/ins&gt;&lt;/p&gt;
@@ -185,17 +213,22 @@ Ascribing to these data standards would ensure fitness for purpose of addresss d
 ![](images/ryl_ml_ltr_exmpl.png)
 ]
 
-.pull-right[Royal Mail require the following to deliver in expected time frames:
+.pull-right[Royal Mail require the following to deliver letters in expected time frames:
 * 1 premise element
 * 1 thoroughfare element
 * 1 locality element
 * the postcode as a minimum
 
-Myany departments would have difficulty getting information to people for addresses that don't meet this.
+Many departments would have difficulty getting information to people for addresses that don't meet this.
 ]
+
+
+???
+***Example*** - Helps deliver apps objectives. Probably critical that quality of address data is high. 
+
 ---
 
-# Motivation - Embedding Data Standards would improve:
+# Motivation - Embedding Data Standards would improve (Part 2):
 
 ## Data Linkage
 
@@ -203,9 +236,13 @@ Integration of all current applications that use addresses within the council wi
 
 ![](images/nptcbc_senior_management_structure.png)
 
+???
+Once we have done embedding, we will be able to link on an address. We can't know where it's gonna be helpful because we don't know the work.
+But having that there makes us more resilient to any change in the future. 
+
 --
 
-Once we have done embedding, we will be able to link on an address. As you can imagine, it's very difficult to know precise immediate impact on each business area, but it certainly makes us more ***resilient*** to any change in the future.
+## Have you had to link an address? Why?
 
 
 ---
@@ -215,6 +252,9 @@ Once we have done embedding, we will be able to link on an address. As you can i
 --
 
 ## Self-Service Address App
+--
+
+ + Single point of contact that unifies many ad-hoc queries around address data
 
 --
 
@@ -222,7 +262,7 @@ Once we have done embedding, we will be able to link on an address. As you can i
 
  + we create the way data is presented and standardised, eg getting new address to send in a letter format.
 
- + Single point of contact that unifies many ad-hoc queries around address data
+
 
 --
 
@@ -234,25 +274,19 @@ Once we have done embedding, we will be able to link on an address. As you can i
 --
 
 &lt;br&gt; 
-* What would you like to see in a self-service address data dashboard/app?
+* What would you like to see in such a self-service address data dashboard/app?
 
 --
 
  + What other dashboard would you need?
  
 ---
-&lt;style type="text/css"&gt;
-.link-style1 a {
-  color: blue;
-  text-decoration: underline;
-}
 
-.link-style2 a {
- color: blue;
-}
+class: center, middle
 
+# Methods
 
-&lt;/style&gt;
+---
 
 # Address Matching Algorithms
 
@@ -271,10 +305,52 @@ Once we have done embedding, we will be able to link on an address. As you can i
 --
 
 ## Literature Review
+  
+*   ASSIGN, OS Places API, addressMatchR,IdoxMatch's Aligned Assets platform, ONS address index (AI) project
 
- *  ASSIGN, OS Places API, addressMatchR,IdoxMatch's Aligned Assets platform, ONS address index (AI) project
+???
+This is where we've got to so far
 
- * This is what we're working on so far.
+---
+
+# Application Programing Interfaces (APIs)
+
+.image-api[.center[![](https://media.geeksforgeeks.org/wp-content/uploads/20230216170349/What-is-an-API.png)]]
+
+???
+explain what API diagram above. IE, compare to waiter part below and end with "well why is that better than just going to the kitchen and asking the chef for the order yourself or even cook it yourself? Save hassle from the middle layers? *Start with security()
+--
+
+* The way we interact with Geoplace Address data through OS AddressBase Data Hub (APIs)
+
+???
+Why is this relevant? - It's the way we interact to database.
+
+--
+
+* **Advantages** - Security, Flexibility, Scalability, Ease of Use, Interoperability,
+
+???
+* ***Security*** - layer of protection between yourself and the database -&gt; works both ways, people can't mess around in the database and we don't have to drop access layers to access data.
+
+* ***flexibility*** -  If data behind the API were to change, it wouldn't necessarily mean a change in how you request the data.
+
+* ***Scalability*** - It scales well. We're not storing data and they're designed for multiple heavy use.
+
+* ***Ease of Use*** - With regards to data, requests are simply web links with parameteres in them. 
+
+* ***Interoperability***  - can use across a range of programming languages/ It's a simple interface. standardised RESTful procedure.
+
+--
+
+
+* **Disadvantages** - Increased design Complexity, Web Connection, Variable performance and flexibility
+
+???
+* ***Increased Design Complexity*** Easier to use but more effort to design than sharing a database connection
+* ***Web Connection*** Firewalls or even service disruptions to internet can  compromise functionality.
+* ***Variable performance and flexibility*** Not all APIs are created equally!
+
 ---
 &lt;style&gt;
 
@@ -319,9 +395,16 @@ Using the data quality dimensions from the Data Quality Hub, we have commenced s
 ## Expansion letters
 A key unit within NPTCBC needed to distribute letters to particular areas of deprivation. 
 
-* Programmatically generated list of addresses from Lower Layer Super Output Areas (LSOAs) based on deprivation scores.
+* Programmatically generated list of addresses from postcodes.
 * OS Data HUB APIs and LLPG used as data sources
-* Address letter outputs ascribed to Royal Mail PAF and Gov notify. 
+* Address letter outputs matched to 
+.link-style1[[Royal Mail’s Postcode Address File (PAF)](https://www.poweredbypaf.com/)] and 7 line address format of .link-style1[[UK Gov Notify](https://www.notifications.service.gov.uk/)]
+* Benefits:
+ +	Saved a lot of time to offices themselves and this is easily reproducible [and they will]
+ +	Make sure that addresses are correct and we're saving time and errors with addressing.
+
+
+--
 
 ## Data Quality Assessments
 We have programmatically produced data quality assessment reports on the address data of various areas, such as social care.
@@ -387,13 +470,14 @@ leaflet() %&gt;% addTiles() %&gt;%
   setView(-93.65, 42.0285, zoom = 17)
 ```
 
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-290ddc6f38bec5c3a26b" style="width:100%;height:144px;"></div>
-<script type="application/json" data-for="htmlwidget-290ddc6f38bec5c3a26b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-53db1004faee2a76a160" style="width:100%;height:144px;"></div>
+<script type="application/json" data-for="htmlwidget-53db1004faee2a76a160">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
 
 ]
 
 ---
-# Interaction with audience
+class: middle, center
+# Interaction/Questions
 
 ---
 class: middle, center

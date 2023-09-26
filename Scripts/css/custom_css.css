@@ -60,6 +60,11 @@ color: #0595c7 /*hex key for darkest bluest colour in NPT logo */
   width: 55%;
 }
 .image-adrsalg img {
-  width: 75%;
+  width: 70%;
+}
+
+.image-api img {
+  width: 80%;
+  height: auto;
 }
 }
