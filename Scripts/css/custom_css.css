@@ -1,4 +1,4 @@
-/* styling for Title (Title on YAML options in .Rmd*/
+/* styling for Title (Title on YAML options in .Rmd. It's disabled by the "Seal: false" in the YAML header so I can use the housekeeping slide before title slide*/
 .title-slide {
   background-image: url(https://mminpt.co.uk/wp-content/uploads/2018/10/nptcbc.jpg); /*nptcbc image */
   background-size: cover; /*rescales and repositions nptcbc image to center*/
@@ -45,10 +45,10 @@ color: #0595c7 /*hex key for darkest bluest colour in NPT logo */
 }
 
 .remark-slide-content {
-  padding-top: -200px;
-  padding-left: -200px;
-  padding-right: -200px;
-  padding-bottom: -200px;
+  padding-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0px;
 }
 
 .left-column{
@@ -65,6 +65,16 @@ color: #0595c7 /*hex key for darkest bluest colour in NPT logo */
 
 .image-api img {
   width: 80%;
+  height: auto;
+}
+
+.image-nptcbc img {
+  width: 60%;
+  height: auto;
+}
+
+.image-ryl_ml_ltr_exmpl{
+  width: 100%;
   height: auto;
 }
 }

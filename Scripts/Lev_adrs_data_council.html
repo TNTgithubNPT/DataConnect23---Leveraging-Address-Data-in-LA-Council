@@ -19,33 +19,12 @@
   </head>
   <body>
     <textarea id="source">
-class: center, middle, inverse, title-slide
 
-.title[
-# <span style="font-size:38px;color:#50ab44">Leveraging Address Data in a Local Authority Council</span>
-]
-.subtitle[
-## <span style="font-size:32px;color:#0595c7">Tanaka Takawira - Senior Data Analyst</span>
-]
-.author[
-### <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Dr. Yasmin Friedmann - Head of Data<br> Rhiannon Elias - Data Analyst
-]
-.institute[
-### Neath Port Talbot County Borough Council
-]
-.date[
-### 28/09/2023
-]
-
----
-
-class: middle, center
+class:hide_logo middle, center
 background-image: url(images/DataConnect23_Housekeeping.jpg)
 background-position: 50% 50%
 background-size: contain
-class: center, bottom, inverse
 
----
 
 
 &lt;style type="text/css"&gt;
@@ -63,14 +42,14 @@ class: center, bottom, inverse
 
 <div>
 <style type="text/css">.xaringan-extra-logo {
-width: 110px;
-height: 128px;
+width: 150px;
+height: 200px;
 z-index: 0;
-background-image: url(https://mminpt.co.uk/wp-content/uploads/2018/10/nptcbc.jpg);
+background-image: url(images/npt_dc23_logo_combined.png);
 background-size: contain;
 background-repeat: no-repeat;
 position: absolute;
-bottom:-1.5em;left:1em;
+bottom:-6em;left:1em;
 }
 </style>
 <script>(function () {
@@ -94,6 +73,25 @@ bottom:-1.5em;left:1em;
   document.addEventListener('DOMContentLoaded', addLogo)
 })()</script>
 </div>
+???
+Let's stand on ceremony first. If you've gone to previous dataconnect23 presentations, you will have seen this before; in a nutshell, if you haven't already or might've forgotten please turn your microhphone off just in case my voice doesn't come across. Any questions, send them to the teams chat and I will eventually tend to them with the help of my colleagues.
+---
+class: hide_logo, middle, center
+
+# &lt;span style="font-size:38px;color:#50ab44"&gt;Leveraging Address Data in a Local Authority Council&lt;/span&gt;
+
+## &lt;span style="font-size:32px;color:#0595c7"&gt; Tanaka Takawira - Senior Data Analyst&lt;/span&gt;
+
+.image-nptcbc[![](https://mminpt.co.uk/wp-content/uploads/2018/10/nptcbc.jpg)]
+
+## Dr. Yasmin Friedmann - Head of Data
+## Rhiannon Elias - Data Analyst
+
+???
+I'll be talking about our adventure in leveraging address data in a local authority council in South Wales, Neath Port Talbot. While I'll be leading the presentation, I'm joined by my colleagues [name them] who have contributed massively in the pieces of work I'll be talking about.
+
+---
+#Aims
 
 --
 
@@ -108,7 +106,7 @@ bottom:-1.5em;left:1em;
 
 --
    
- + Where we are, What we've done and what we're aiming for
+ + What we've done, Where we are going and what we're aiming for
    &lt;br&gt;
    &lt;br&gt;
    
@@ -217,7 +215,7 @@ Ascribing to these data standards would ensure fitness for purpose of addresss d
 --
 &lt;p style="text-align: center;color:#0595c7"&gt;&lt;ins&gt;Example&lt;/ins&gt;&lt;/p&gt;
 .pull-left[
-![](images/ryl_ml_ltr_exmpl.png)
+.image-ryl_ml_ltr_exmpl[![](images/ryl_ml_ltr_exmpl.png)]
 ]
 
 .pull-right[Royal Mail require the following to deliver letters in expected time frames:
@@ -474,11 +472,11 @@ Why is this relevant? - It's the way we interact to database.
 ```r
 library(leaflet)
 leaflet() %&gt;% addTiles() %&gt;%
-  setView(-93.65, 42.0285, zoom = 17)
+  setView(-3.8283643,51.6248032, zoom = 16.5)
 ```
 
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-e071c2c21de12d9efae1" style="width:100%;height:144px;"></div>
-<script type="application/json" data-for="htmlwidget-e071c2c21de12d9efae1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-4280ac6899dcb66e70b1" style="width:100%;height:144px;"></div>
+<script type="application/json" data-for="htmlwidget-4280ac6899dcb66e70b1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[51.6248032,-3.8283643],16.5,[]]},"evals":[],"jsHooks":[]}</script>
 
 ]
 
