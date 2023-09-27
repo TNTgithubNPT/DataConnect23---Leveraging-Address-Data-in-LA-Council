@@ -94,6 +94,9 @@ bottom:-1.5em;left:1em;
 --
 
 ## Discuss
+
+--
+
    &lt;br&gt;
  + Embedding Address Data Standards
    &lt;br&gt;
@@ -280,11 +283,71 @@ But having that there makes us more resilient to any change in the future.
 
  + What other dashboard would you need?
  
+
+---
+&lt;style&gt;
+
+.remark-slide-content &gt; h1:first-of-type {   font-size: 5px;   margin-top: -250px; }
+
+.remark-slide-content {
+  padding-top: -100px;
+  padding-left: -100px;
+  padding-right: -100px;
+  padding-bottom: -100px;
+}
+
+&lt;/style&gt;
+# What are we Doing/Aiming to do? Part 2
+
+--
+
+## Champion
+
+Promote the concept of a standardized address format to all staff, and signpost to training resources.
+
+--
+
+
+## Standard Operating Procedure (SOP)
+Create an SOP of how to record and validate addresses, UPRNs and USRNs in the day-to-day work on spreadsheets or similar until automation. 
+
+--
+
+## Data Linking
+Linking datasets across various domains so that the council can have a broader view of council residents' experience. 
+
+--
+
+## Data Quality Assessments
+
+Using the data quality dimensions from the Data Quality Hub, we have commenced some Data Quality Reports on address datasets within various domains across the business. This is helping us understand the data quality and the cost/benefit on various data quality improvement actions such as data cleaning or address matching to a UPRN. For example, de-duplicating and completeness (eg, filling in missing towns in otherwise complete addresses)
 ---
 
+# Examples so Far
+
+## Expansion letters
+A key unit within NPTCBC needed to distribute letters to particular areas of deprivation. 
+
+* Programmatically generated list of addresses from postcodes.
+* OS Data HUB APIs and LLPG used as data sources
+* Address letter outputs matched to 
+.link-style1[[Royal Mail’s Postcode Address File (PAF)](https://www.poweredbypaf.com/)] and 7 line address format of .link-style1[[UK Gov Notify](https://www.notifications.service.gov.uk/)]
+* Benefits:
+ +	Saved a lot of time to offices themselves and this is easily reproducible [and they will]
+ +	Make sure that addresses are correct and we're saving time and errors with addressing.
+
+
+--
+
+## Data Quality Assessments
+We have programmatically produced data quality assessment reports on the address data of various areas, such as social care.
+  * Data quality Dimensions
+  * give view of fitness for purpose
+
+---
 class: center, middle
 
-# Methods
+# Methods/Tools we use
 
 ---
 
@@ -354,66 +417,6 @@ Why is this relevant? - It's the way we interact to database.
 ---
 &lt;style&gt;
 
-.remark-slide-content &gt; h1:first-of-type {   font-size: 5px;   margin-top: -250px; }
-
-.remark-slide-content {
-  padding-top: -100px;
-  padding-left: -100px;
-  padding-right: -100px;
-  padding-bottom: -100px;
-}
-
-&lt;/style&gt;
-# What are we Doing/Aiming to do? Part 2
-
---
-
-## Champion
-
-Promote the concept of a standardized address format to all staff, and signpost to training resources.
-
---
-
-
-## Standard Operating Procedure (SOP)
-Create an SOP of how to record and validate addresses, UPRNs and USRNs in the day-to-day work on spreadsheets or similar until automation. 
-
---
-
-## Data Linking
-Linking datasets across various domains so that the council can have a broader view of council residents' experience. 
-
---
-
-## Data Quality Assessments
-
-Using the data quality dimensions from the Data Quality Hub, we have commenced some Data Quality Reports on address datasets within various domains across the business. This is helping us understand the data quality and the cost/benefit on various data quality improvement actions such as data cleaning or address matching to a UPRN. For example, de-duplicating and completeness (eg, filling in missing towns in otherwise complete addresses)
----
-
-# Examples so Far
-
-## Expansion letters
-A key unit within NPTCBC needed to distribute letters to particular areas of deprivation. 
-
-* Programmatically generated list of addresses from postcodes.
-* OS Data HUB APIs and LLPG used as data sources
-* Address letter outputs matched to 
-.link-style1[[Royal Mail’s Postcode Address File (PAF)](https://www.poweredbypaf.com/)] and 7 line address format of .link-style1[[UK Gov Notify](https://www.notifications.service.gov.uk/)]
-* Benefits:
- +	Saved a lot of time to offices themselves and this is easily reproducible [and they will]
- +	Make sure that addresses are correct and we're saving time and errors with addressing.
-
-
---
-
-## Data Quality Assessments
-We have programmatically produced data quality assessment reports on the address data of various areas, such as social care.
-  * Data quality Dimensions
-  * give view of fitness for purpose
-
----
-&lt;style&gt;
-
 .remark-slide-content &gt; h1 {   font-size: 35px;   margin-top: -250px; }
 
 &lt;/style&gt;
@@ -470,8 +473,8 @@ leaflet() %&gt;% addTiles() %&gt;%
   setView(-93.65, 42.0285, zoom = 17)
 ```
 
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-53db1004faee2a76a160" style="width:100%;height:144px;"></div>
-<script type="application/json" data-for="htmlwidget-53db1004faee2a76a160">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-067a54a879529ad5bca0" style="width:100%;height:144px;"></div>
+<script type="application/json" data-for="htmlwidget-067a54a879529ad5bca0">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[42.0285,-93.65],17,[]]},"evals":[],"jsHooks":[]}</script>
 
 ]
 

@@ -47,6 +47,9 @@ xaringanExtra::use_logo(
 --
 
 ## Discuss
+
+--
+
    <br>
  + Embedding Address Data Standards
    <br>
@@ -102,7 +105,7 @@ class: center, middle
 
 - Data is enriched and transformed by adding best attributes from source datasets to enhance quality of overall product.
 
-- The Unique Property Reference Number (UPRN) is the unique identifier for every addressable location across the UK. Every addressable location in Great Britain is uniquely identified by the Unique Property Reference Number (UPRN). 
+- The Unique Property Reference Number (UPRN) is the unique identifier for every addressable location across the UK.
 
 ---
 
@@ -172,7 +175,7 @@ Ascribing to these data standards would ensure fitness for purpose of addresss d
 * 1 locality element
 * the postcode as a minimum
 
-Many departments would have difficulty getting information to people for addresses that don't meet this.
+Many departments may have difficulty getting information to people for addresses that don't meet this.
 ]
 
 
@@ -233,11 +236,71 @@ But having that there makes us more resilient to any change in the future.
 
  + What other dashboard would you need?
  
+
+---
+<style>
+
+.remark-slide-content > h1:first-of-type {   font-size: 5px;   margin-top: -250px; }
+
+.remark-slide-content {
+  padding-top: -100px;
+  padding-left: -100px;
+  padding-right: -100px;
+  padding-bottom: -100px;
+}
+
+</style>
+# What are we Doing/Aiming to do? Part 2
+
+--
+
+## Champion
+
+Promote the concept of a standardized address format to all staff, and signpost to training resources.
+
+--
+
+
+## Standard Operating Procedure (SOP)
+Create an SOP of how to record and validate addresses, UPRNs and USRNs in the day-to-day work on spreadsheets or similar until automation. 
+
+--
+
+## Data Linking
+Linking datasets across various domains so that the council can have a broader view of council residents' experience. 
+
+--
+
+## Data Quality Assessments
+
+Using the data quality dimensions from the Data Quality Hub, we have commenced some Data Quality Reports on address datasets within various domains across the business. This is helping us understand the data quality and the cost/benefit on various data quality improvement actions such as data cleaning or address matching to a UPRN. For example, de-duplicating and completeness (eg, filling in missing towns in otherwise complete addresses)
 ---
 
+# Examples so Far
+
+## Expansion letters
+A key unit within NPTCBC needed to distribute letters to particular areas of deprivation. 
+
+* Programmatically generated list of addresses from postcodes.
+* OS Data HUB APIs and LLPG used as data sources
+* Address letter outputs matched to 
+.link-style1[[Royal Mail’s Postcode Address File (PAF)](https://www.poweredbypaf.com/)] and 7 line address format of .link-style1[[UK Gov Notify](https://www.notifications.service.gov.uk/)]
+* Benefits:
+ +	Saved a lot of time to offices themselves and this is easily reproducible [and they will]
+ +	Make sure that addresses are correct and we're saving time and errors with addressing.
+
+
+--
+
+## Data Quality Assessments
+We have programmatically produced data quality assessment reports on the address data of various areas, such as social care.
+  * Data quality Dimensions
+  * give view of fitness for purpose
+
+---
 class: center, middle
 
-# Methods
+# Methods/Tools we use
 
 ---
 
@@ -303,66 +366,6 @@ Why is this relevant? - It's the way we interact to database.
 * ***Increased Design Complexity*** Easier to use but more effort to design than sharing a database connection
 * ***Web Connection*** Firewalls or even service disruptions to internet can  compromise functionality.
 * ***Variable performance and flexibility*** Not all APIs are created equally!
-
----
-<style>
-
-.remark-slide-content > h1:first-of-type {   font-size: 5px;   margin-top: -250px; }
-
-.remark-slide-content {
-  padding-top: -100px;
-  padding-left: -100px;
-  padding-right: -100px;
-  padding-bottom: -100px;
-}
-
-</style>
-# What are we Doing/Aiming to do? Part 2
-
---
-
-## Champion
-
-Promote the concept of a standardized address format to all staff, and signpost to training resources.
-
---
-
-
-## Standard Operating Procedure (SOP)
-Create an SOP of how to record and validate addresses, UPRNs and USRNs in the day-to-day work on spreadsheets or similar until automation. 
-
---
-
-## Data Linking
-Linking datasets across various domains so that the council can have a broader view of council residents' experience. 
-
---
-
-## Data Quality Assessments
-
-Using the data quality dimensions from the Data Quality Hub, we have commenced some Data Quality Reports on address datasets within various domains across the business. This is helping us understand the data quality and the cost/benefit on various data quality improvement actions such as data cleaning or address matching to a UPRN. For example, de-duplicating and completeness (eg, filling in missing towns in otherwise complete addresses)
----
-
-# Examples so Far
-
-## Expansion letters
-A key unit within NPTCBC needed to distribute letters to particular areas of deprivation. 
-
-* Programmatically generated list of addresses from postcodes.
-* OS Data HUB APIs and LLPG used as data sources
-* Address letter outputs matched to 
-.link-style1[[Royal Mail’s Postcode Address File (PAF)](https://www.poweredbypaf.com/)] and 7 line address format of .link-style1[[UK Gov Notify](https://www.notifications.service.gov.uk/)]
-* Benefits:
- +	Saved a lot of time to offices themselves and this is easily reproducible [and they will]
- +	Make sure that addresses are correct and we're saving time and errors with addressing.
-
-
---
-
-## Data Quality Assessments
-We have programmatically produced data quality assessment reports on the address data of various areas, such as social care.
-  * Data quality Dimensions
-  * give view of fitness for purpose
 
 ---
 <style>
