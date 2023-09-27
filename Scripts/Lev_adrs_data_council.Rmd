@@ -13,9 +13,13 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+class: middle, center
+background-image: url(images/DataConnect23_Housekeeping.jpg)
+background-position: 50% 50%
+background-size: contain
+class: center, bottom, inverse
 
-# Aims
-
+---
 ```{r setup, include=FALSE}
 library(xaringanExtra)
 library(leaflet)
@@ -441,4 +445,4 @@ background-image: url(images/NPTCBC_color_grad_bkgrnd.png)
 
 # <span style="color:white">Thanks!</span>  
 
-<span style="color:white">slides and contact details available github.com/...(?)</span>  
+<span style="color:white">slides and contact details available .link-style1[[on github](https://github.com/TNTgithubNPT/DataConnect23---Leveraging-Address-Data-in-LA-Council)]
