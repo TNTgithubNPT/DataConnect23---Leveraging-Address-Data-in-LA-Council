@@ -50,7 +50,7 @@ xaringanExtra::use_logo(
 
 ```
 ???
-Let's stand on ceremony first. If you've gone to previous dataconnect23 presentations, you will have seen this before; in a nutshell, if you haven't already or might've forgotten please turn your microhphone off just in case my voice doesn't come across. Any questions, send them to the teams chat and I will eventually tend to them with the help of my colleagues.
+Let's stand on ceremony first. If you've gone to previous dataconnect23 presentations, you will have seen this before; in a nutshell, if you haven't already or might've forgotten please turn your microhphone off just in case my voice doesn't come across. Any questions, send them to the teams chat and I will eventually tend to them with the help of my colleagues. Lastly, I will be recording this session. If anyone's uncomfortable with that or any objections, please let me know.
 ---
 class: hide_logo, middle, center
 
@@ -538,4 +538,8 @@ background-image: url(images/NPTCBC_color_grad_bkgrnd.png)
 
 # <span style="color:white">Thanks!</span>  
 
-<span style="color:white">slides and contact details available .link-style1[[on github](https://github.com/TNTgithubNPT/DataConnect23---Leveraging-Address-Data-in-LA-Council)]
+<span style="color:white">slides and contact details available</span>  .link-style1[[on github](https://github.com/TNTgithubNPT/DataConnect23---Leveraging-Address-Data-in-LA-Council)]
+<br>
+<br>
+<span style="color:white"> T.Takawira@npt.gov.uk</span> 
+
