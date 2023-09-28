@@ -73,8 +73,13 @@ color: #0595c7 /*hex key for darkest bluest colour in NPT logo */
   height: auto;
 }
 
-.image-ryl_ml_ltr_exmpl{
-  width: 100%;
+.image-ryl_ml_ltr_exmpl img {
+  width: 200%;
+  height: auto;
+}
+
+.image-afan img {
+  width: 75%;
   height: auto;
 }
 }

@@ -65,6 +65,37 @@ class: hide_logo, middle, center
 
 ???
 I'll be talking about our adventure in leveraging address data in a local authority council in South Wales, Neath Port Talbot. While I'll be leading the presentation, I'm joined by my colleagues [name them] who have contributed massively in the pieces of work I'll be talking about.
+---
+# Neath
+???
+So, personally, some things I like about Neath that I would tell someone else about are.
+
+--
+
+## Neath September Fair 
+
+![](images/neath_annual_market.jpg)
+???
+I believe it's the oldest running fair in Europe, having started some 700 years ago.
+
+---
+# Spoilt for outdoor activity!
+
+## Beach
+
+![](images/aberavon_beach.jpg)
+???
+I like going to the beach when the weather's ambient like pictured (so nut just sunny), There's lots to do round there, for me, that includes fishing off the beach.
+---
+# Spoilt for outdoor activity!
+
+???
+it goes on! Afan Forest is great for cycling and walking. Some proof there, that the sun does shine.
+
+
+## .center[Afan Forest] 
+.center[.image-afan[![](images/afan_forest_park.jpg)]]
+
 
 ---
 #Aims
@@ -73,6 +104,8 @@ I'll be talking about our adventure in leveraging address data in a local author
 
 ## Discuss
 
+???
+Just read slides verbatim
 --
 
    <br>
@@ -89,6 +122,9 @@ I'll be talking about our adventure in leveraging address data in a local author
 --
    
  + Methods/Tools we use
+ 
+???
+We'll get a little bit technical for this one
 
 --
 <br>
@@ -98,6 +134,9 @@ I'll be talking about our adventure in leveraging address data in a local author
 <br>
 
 ## Invite Contribution from peers, share experiences and good practice
+
+???
+Our team is new in the address data journey,
 
 ---
 
