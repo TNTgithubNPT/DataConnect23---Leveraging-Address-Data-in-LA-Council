@@ -54,28 +54,27 @@ Let's stand on ceremony first. If you've gone to previous dataconnect23 presenta
 ---
 class: hide_logo, middle, center
 
-# <span style="font-size:38px;color:#50ab44">Leveraging Address Data in a Local Authority Council</span>
-
-## <span style="font-size:32px;color:#0595c7"> Tanaka Takawira - Senior Data Analyst</span>
+# <span style="font-size:32px;color:#50ab44">Leveraging Address Data in a Local Authority Council</span>
+## <span style="font-size:26px;color:#0595c7"> Neath Port Talbot Country Borough Council (NPTCBC)</span>
+## <span style="font-size:26px;color:#0595c7"> Tanaka Takawira - Senior Data Analyst</span>
 
 .image-nptcbc[![](https://mminpt.co.uk/wp-content/uploads/2018/10/nptcbc.jpg)]
 
-## Dr. Yasmin Friedmann - Head of Data
-## Rhiannon Elias - Data Analyst
+## <span style="font-size:18px;color:#0595c7"> Dr. Yasmin Friedmann - Head of Data</span>
+## <span style="font-size:18px;color:#0595c7"> Rhiannon Elias - Data Analyst</span>
+## <span style="font-size:18px;color:#0595c7"> 28 September 2023</span>
+
 
 ???
 I'll be talking about our adventure in leveraging address data in a local authority council in South Wales, Neath Port Talbot. While I'll be leading the presentation, I'm joined by my colleagues [name them] who have contributed massively in the pieces of work I'll be talking about.
 ---
 # Neath
-???
-So, personally, some things I like about Neath that I would tell someone else about are.
-
---
 
 ## Neath September Fair 
 
 ![](images/neath_annual_market.jpg)
 ???
+So, personally, some things I like about Neath that I would tell someone else about are.
 I believe it's the oldest running fair in Europe, having started some 700 years ago.
 
 ---
@@ -89,12 +88,15 @@ I like going to the beach when the weather's ambient like pictured (so nut just 
 ---
 # Spoilt for outdoor activity!
 
+## .center[Afan Forest]
+
+.center[.image-afan[![](images/afan_forest_park.jpg)]]
+
 ???
 it goes on! Afan Forest is great for cycling and walking. Some proof there, that the sun does shine.
 
+ 
 
-## .center[Afan Forest] 
-.center[.image-afan[![](images/afan_forest_park.jpg)]]
 
 
 ---
@@ -136,7 +138,7 @@ We'll get a little bit technical for this one
 ## Invite Contribution from peers, share experiences and good practice
 
 ???
-Our team is new in the address data journey,
+Our team is new in the address data journey; We're taking this opportunity to learn from others as well as share our learnings.
 
 ---
 
@@ -151,11 +153,17 @@ class: center, middle
 
 --
 
-* Source of UK Address Data Standards
+* Source of UK Address Data and disemmination of standards through the National Land and Property Gazetteer (NLPG)
+
+???
+46.5 million addresses
 
 --
 
-- Central source for UK addresses and streets, working with over 300 councils across England and Wales which have a statutory responsibility for approving and creating addresses. 46.5 million addresses, 2 million records update monthly. 
+* working with over 300 councils across England and Wales which have a statutory responsibility in maintaining Local Land and Property Gazetteer (LLPG) and approving/creating addresses.
+
+???
+2 million records update monthly. 
 
 --
 
@@ -165,11 +173,17 @@ class: center, middle
 
 - Validation and assurance process that runs 100s of checks on each record before being accepted into the database.
 
+???
+364 checks on each record last time I checked.
+
 --
 
 - Data is enriched and transformed by adding best attributes from source datasets to enhance quality of overall product.
 
-- The Unique Property Reference Number (UPRN) is the unique identifier for every addressable location across the UK.
+- The Unique Property Reference Number (UPRN) is the unique identifier for every addressable location across the UK. There's also the Unique Street Reference Number (USRN).
+
+???
+Key tenet of unlocking address standard. these unique reference numbers mean essentially even an relatively incomplete address can be matched to a complete one.
 
 ---
 
@@ -189,14 +203,19 @@ NPTCBC has approximately 350 known applications, many using address data. Addres
 
 
 ## Standards
-There is a tremendous opportunity for an agreed/mandated address data standard to be put in place across the council for the first time. This includes ubiquity of recording/validating addresses and the concepts of UPRN and USRN, emanating from a central address repository known to most (if not all) who record addresses.
+There is a tremendous opportunity for an agreed/mandated address data standard to be put in place across the council for the first time. 
 <!-- ## Accessiblity -->
 <!-- Address data can be used by a wide variety of different applications, that may be known to exist by a few people or the address data is hard to share.  -->
+
+???
+This includes ubiquity of recording/validating addresses and the concepts of UPRN and USRN, emanating from a central address repository known to most (if not all) who record addresses.
 --
 
 ## Quality
-Address Data in the council meets varying degrees of fitness for purpose. There's also a tremendous opportunity to elevate the breadth and depth of understanding the address data quality across the council. 
+There's also a tremendous opportunity to elevate the breadth and depth of understanding the address data quality across the council. 
 
+???
+Just like alot of large organisations recording a large number of addresses, Address Data in the council meets varying degrees of fitness for purpose. 
 ---
 <style>
 .remark-slide-content {
@@ -212,10 +231,10 @@ Address Data in the council meets varying degrees of fitness for purpose. There'
 
 ## Staff awareness
 
-Promotion of the concept of a standardised address format, and signposting to training resources would dissemminate the established address data standards. Staff awareness will improve quality of address data inputted by causing people to be more careful.
+Disseminating the established address data standards and signposting to training resources would would promote the concept of a standardised address format. Staff awareness will improve quality of address data inputted by causing people to be more careful.
 
 ???
-***Staff Awareness*** -  Benefits of awareness depends on person, if it's on digital services, anytime we write a program that accepts address will always be dropdown and not free text. This is for people who create apps
+***Staff Awareness*** -  Benefits of awareness depends on person, if it's on digital services, anytime we write a program that accepts address will always be drop down and not free text. This is for people who create apps
 For people who input data, if they're aware of importance of standards, will be more aware when inputting data, will be more careful to write in correct standard and write UPRN. 
 
 --
@@ -225,7 +244,7 @@ For people who input data, if they're aware of importance of standards, will be 
 Ascribing to these data standards would ensure fitness for purpose of addresss data across many applications, increase options to leverage the data and reduce time to understand data.
 
 ???
-***Data Quality*** Source of data will always be geoplace - people always refer to that. Wherever someone can see an address they can access LLPG or Geoplace
+***Data Quality*** It's probably critical that quality of address data is high in order to deliver app objectives. 
 
 --
 <p style="text-align: center;color:#0595c7"><ins>Example</ins></p>
@@ -244,7 +263,9 @@ Many departments may have difficulty getting information to people for addresses
 
 
 ???
-***Example*** - Helps deliver apps objectives. Probably critical that quality of address data is high. 
+***Example*** - Most people have sent a letter, but might not know precisely what royal mail need to guarantee timely delivery. You can imagine a department having the same problem. [discuss visual, what each element is and highlight is example of what you need].
+
+An department might meet this criteria and meet fitness for purpose but think, for example, without 2 premise elements, they can't send out a letter. Conversely, a letter might have a lot of address lines and assume it's good to go but be missing the thoroughfare element. 
 
 ---
 
@@ -252,13 +273,16 @@ Many departments may have difficulty getting information to people for addresses
 
 ## Data Linkage
 
-Integration of all current applications that use addresses within the council with the LLPG for local addresses and NPG for national addresses. The integration will add UPRN, USRN, and possibly other useful data to any of the datasets, enabling linkage across teams and enabling sharing of data. UPRN is gold standard, various data quality analysis/measurements fills the gap. 
+A holistic snapshot of the council structure: Alot of departments have address data. 
+
 
 ![](images/nptcbc_senior_management_structure.png)
 
 ???
-Once we have done embedding, we will be able to link on an address. We can't know where it's gonna be helpful because we don't know the work.
-But having that there makes us more resilient to any change in the future. 
+Once we have done embedding, we will be able to link on an address. It's difficult in such a position to know the full extent of how it's gonna be helpful because we don't know the work. We're trying to understand address sources.
+Having UPRN makes us more resilient to any change in the future. 
+
+Integration of all current applications that use addresses within the council with the LLPG for local addresses and NPG for national addresses. The integration will add UPRN, USRN, and possibly other useful data to any of the datasets, enabling linkage across teams and enabling sharing of data. UPRN is gold standard, various data quality analysis/measurements fills the gap. 
 
 --
 
@@ -267,7 +291,7 @@ But having that there makes us more resilient to any change in the future.
 
 ---
 
-# What are we Doing/Aiming to do? Part 1
+# What are we Aiming to do?
 
 --
 
@@ -314,7 +338,7 @@ But having that there makes us more resilient to any change in the future.
 }
 
 </style>
-# What are we Doing/Aiming to do? Part 2
+# What are we Doing?
 
 --
 
@@ -350,16 +374,16 @@ A key unit within NPTCBC needed to distribute letters to particular areas of dep
 * Address letter outputs matched to 
 .link-style1[[Royal Mail’s Postcode Address File (PAF)](https://www.poweredbypaf.com/)] and 7 line address format of .link-style1[[UK Gov Notify](https://www.notifications.service.gov.uk/)]
 * Benefits:
- +	Saved a lot of time to offices themselves and this is easily reproducible [and they will]
+ +	Saved a lot of time to offices themselves and this is easily reproducible.
  +	Make sure that addresses are correct and we're saving time and errors with addressing.
 
 
 --
 
 ## Data Quality Assessments
-We have programmatically produced data quality assessment reports on the address data of various areas, such as social care.
-  * Data quality Dimensions
-  * give view of fitness for purpose
+We are programmatically producing data quality assessment reports on the address data of areas such as social care.
+  * Data Quality Dimensions
+  * Give view of fitness for purpose
 
 ---
 class: center, middle
@@ -391,6 +415,15 @@ class: center, middle
 ???
 This is where we've got to so far
 
+---
+class: middle, center
+
+# The Machine Knows!
+
+![](images/the_machine_knows_machine.gif)
+
+???
+In case you missed it, For those who are as observant and clued up on pop culture references as my colleague Rhiannon... Yes, that was the address for Dundler Mifflin, from "The Office" sitcom" tv show
 ---
 
 # Application Programing Interfaces (APIs)
@@ -424,7 +457,7 @@ Why is this relevant? - It's the way we interact to database.
 --
 
 
-* **Disadvantages** - Increased design Complexity, Web Connection, Variable performance and flexibility
+* **Disadvantages** - Increased design complexity, Web connection, Variable performance and flexibility
 
 ???
 * ***Increased Design Complexity*** Easier to use but more effort to design than sharing a database connection
